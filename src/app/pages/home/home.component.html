@@ -1,0 +1,38 @@
+<div class="main">
+  <div class="container">
+    <div class="row d-flex">
+      <img class="img-fluid w-7" src="../../../assets/images/desafio do alekito.png" alt="Desafio Alekito">
+    </div>
+    <div class="row d-flex">
+      <form autocomplete="off" [formGroup]="registrationForm"  (ngSubmit)="submitFormLogin()" (ngReset)="resetForm()">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Nome*" formControlName="nome" name="nome">
+          <ng-container *ngIf="registrationForm.controls.nome.touched">
+            <span class="validacao" *ngIf="f.nome.errors?.required">
+                Campo obrigatório
+            </span>
+          </ng-container>
+        </div>
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="E-mail" formControlName="email" name="email">
+            <ng-container *ngIf="registrationForm.controls.email.touched">
+              <span class="validacao"  *ngIf="f.email.errors?.required">
+                  Campo obrigatório
+              </span>
+              <span class="validacao"  *ngIf="f.email.errors?.email">
+                  E-mail inválido
+              </span>
+            </ng-container>
+        </div>
+        <div class="row d-flex">
+          <button type="submit" class="btn-play">
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <div class="row d-flex">
+      <img  class="img-fluid" src="../../../assets/images/alekito.png" alt="play">
+    </div>
+  </div>
+</div>

@@ -1,1 +1,66 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body, html{
+  height: 100%;
+}
+
+.main {
+  width: 100%;
+  height: 100%;
+}
+
+.container {
+  padding: 3rem;
+}
+
+.row {
+  margin: 15px 10px;
+  padding: 15px;
+}
+
+form {
+  width: 70%;
+}
+
+.d-flex{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  padding: 0.25rem 1rem;
+  font-size: 1.5rem;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 2rem;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.btn-play:hover {
+  -webkit-box-shadow: -2px 2px 15px -3px #000000;
+  box-shadow: -2px 2px 15px -3px #000000;
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+.w-7 {
+  width: 75%;
+}
