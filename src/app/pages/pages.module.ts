@@ -5,13 +5,15 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { HomeComponent } from './home/home.component';
 import { PrimeiraComponent } from './primeira/primeira.component';
+import { Desafio2Component } from './desafio2/desafio2.component';
 
 
 
 @NgModule({
   declarations: [
     PrimeiraComponent,
-    HomeComponent
+    HomeComponent,
+    Desafio2Component
   ],
   imports: [
     CommonModule,
@@ -21,7 +23,8 @@ import { PrimeiraComponent } from './primeira/primeira.component';
   ],
   exports: [
     PrimeiraComponent,
-    HomeComponent
+    HomeComponent,
+    Desafio2Component
   ]
 })
 export class PagesModule { }

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { __core_private_testing_placeholder__ } from '@angular/core/testing';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-primeira',
@@ -8,9 +8,17 @@ import { __core_private_testing_placeholder__ } from '@angular/core/testing';
 })
 export class PrimeiraComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
+  }
+
+  goToHome() {
+    this.router.navigate(['/']);
+  }
+
+  nextPage() {
+    this.router.navigate(['/desafio-2']);
   }
 
 

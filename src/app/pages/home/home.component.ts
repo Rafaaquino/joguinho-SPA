@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { Cadastro } from '../model/cadastro';
+import { Cadastro } from '../../model/cadastro'
 
 @Component({
   selector: 'app-home',

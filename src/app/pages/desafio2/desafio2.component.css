@@ -1,0 +1,35 @@
+.main {
+  background-image: url('../../../assets/images/bg.png');
+}
+
+.card {
+  width: 100%;
+  height: 700px;
+  background-color: #75E3DA;
+  border-radius: 2rem;
+  padding: 3rem;
+  text-align: center;
+}
+
+.d-flex-c {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center;
+}
+
+.pl-img {
+  position: absolute;
+  left: 0;
+  bottom: -66px;
+}
+
+.ml-4 {
+  margin-right: 3rem;
+  margin-left: 1rem;
+}
+
+.pbt-3 {
+  padding: 3rem 0;
+}
