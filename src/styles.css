@@ -74,4 +74,33 @@ form {
   line-height: 1;
   border: 0;
   border-radius: 15px;
+  -webkit-box-shadow: 1px 3px 15px -3px #000000;
+  box-shadow: 1px 3px 15px -3px #000000;
+}
+
+.btn:active {
+  background-color:#000;
+  color: #fff;
+}
+
+.btn:disabled {
+
+}
+
+@media screen and (min-width: 820px) {
+  .pl-img{
+    bottom: 67px!important;
+  }
+  .main {
+    height: 100%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .pl-img {
+    bottom: 233px!important;
+  }
+  .main {
+    height: 100%;
+  }
 }

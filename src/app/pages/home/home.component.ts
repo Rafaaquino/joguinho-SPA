@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { ServicesService } from 'src/app/services/services.service';
 import { Cadastro } from '../../model/cadastro'
 
 @Component({
@@ -12,7 +13,7 @@ export class HomeComponent implements OnInit {
 
   registrationForm: FormGroup;
 
-  constructor(private fb: FormBuilder, private router: Router) { }
+  constructor(private fb: FormBuilder, private router: Router, private registerService: ServicesService) { }
 
   ngOnInit(): void {
     this.createForm(new Cadastro());
@@ -25,7 +26,8 @@ export class HomeComponent implements OnInit {
   createForm(user: Cadastro) {
     this.registrationForm = this.fb.group({
       nome: [user.nome,[Validators.required]],
-      email: [user.email,[Validators.required, Validators.email]]
+      uf: [user.uf,[Validators.required]],
+      crm: [user.crm,[Validators.required]],
     });
   }
 
@@ -36,8 +38,15 @@ export class HomeComponent implements OnInit {
     }
     else {
       alert("formulario enviado");
-      this.router.navigate(['/desafio-1']);
+      this.registerService.registerUser(this.registrationForm.value.nome, this.registrationForm.value.uf, this.registrationForm.value.crm).subscribe(res =>{
+        console.log(res, "retorno cadastro usuario");
+        localStorage.setItem('idUser', JSON.stringify(res.idUser));
+        this.router.navigate(['/desafio-1']);
+      }, error =>{
+        console.log(error, 'error');
+      })
     }
+
   }
 
   resetForm() {

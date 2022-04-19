@@ -1,15 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router'
-import { ServicesService } from 'src/app/services/services.service';
+import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-desafio2',
-  templateUrl: './desafio2.component.html',
-  styleUrls: ['./desafio2.component.css']
+  selector: 'app-desafio4',
+  templateUrl: './desafio4.component.html',
+  styleUrls: ['./desafio4.component.css']
 })
-export class Desafio2Component implements OnInit {
+export class Desafio4Component implements OnInit {
 
-  idUser: number;
   valor: any;
   id: any;
   btn1: string;
@@ -22,11 +20,9 @@ export class Desafio2Component implements OnInit {
   btn2Disable: boolean;
   btn3Disable: boolean;
 
-  constructor(private router: Router, private desafioService: ServicesService) { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
-    let recebe = localStorage.getItem('idUser');
-    this.idUser = Number(recebe);
   }
 
   goToHome() {
@@ -34,15 +30,15 @@ export class Desafio2Component implements OnInit {
   }
 
   backPage() {
-    this.router.navigate(['/']);
-  }
-
-  nextPage() {
     this.router.navigate(['/desafio-2']);
   }
 
+  nextPage() {
+    this.router.navigate(['/obrigado']);
+  }
+
   clickHandler(id, value) {
-    this.valor = value
+    this.valor = value;
     this.id = id;
     if(this.id == 'btn1'){
       this.btn2Disable = true;
@@ -59,14 +55,6 @@ export class Desafio2Component implements OnInit {
       this.btn1Disable = true;
       this.cor3 = true
     }
-    console.log(this.valor, this.id, "deu certo")
-    this.desafioService.desafio1(this.idUser, value, 'questao2').subscribe(res =>{
-
-    }, erro => {
-      console.log(erro, 'erro');
-    })
+    console.log(this.valor, "deu certo")
   }
-
-
-
 }

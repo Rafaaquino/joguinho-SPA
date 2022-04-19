@@ -1,5 +1,7 @@
 export class Cadastro {
-  id: number;
+  idUser: number;
   nome: string;
   email: string;
+  uf: string;
+  crm: string;
 }
