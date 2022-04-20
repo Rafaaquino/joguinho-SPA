@@ -65,7 +65,7 @@ export class ServicesService {
 
     let body = {
       "idUser": idUser,
-      "question1": questao,
+      "question1": questao
     }
 
     const url = `${this.baseUrlCadastro}/step4`;
