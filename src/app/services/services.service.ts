@@ -61,18 +61,18 @@ export class ServicesService {
       }));
   }
 
-  desafio3(idUser: number, questao: string) {
+  desafio3(idUser: number, questao1: string) {
 
     let body = {
       "idUser": idUser,
-      "question1": questao
+      "question1": questao1
     }
 
     const url = `${this.baseUrlCadastro}/step4`;
 
     return this.http.post<any>(url, body)
-      .pipe(map(desafio2 => {
-        return desafio2;
+      .pipe(map(desafio3 => {
+        return desafio3;
       }));
   }
 
