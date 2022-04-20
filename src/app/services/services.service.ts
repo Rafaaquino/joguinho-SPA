@@ -9,7 +9,8 @@ import { Cadastro } from '../model/cadastro';
 })
 export class ServicesService {
 
-  readonly baseUrlCadastro: string = 'https://app-alekito.herokuapp.com//alekito/createAccount'
+  readonly baseUrlCadastro: string = 'https://app-alekito.herokuapp.com/alekito/createAccount';
+  readonly baseUrl: string = 'https://app-alekito.herokuapp.com/alekito';
 
   constructor(private router: Router, private http: HttpClient) { }
 
@@ -29,7 +30,22 @@ export class ServicesService {
       }));
   }
 
-  desafio1(idUser: number, questao1: string, questao2: string) {
+  desafio1(idUser: number, questao1: string) {
+
+    let body = {
+      idUser: idUser,
+      question1: questao1
+    }
+
+    const url = `${this.baseUrlCadastro}/step2`;
+
+    return this.http.post<any>(url, body)
+      .pipe(map(desafio1 => {
+        return desafio1;
+      }));
+  }
+
+  desafio2(idUser: number, questao1: string, questao2: string) {
 
     let body = {
       idUser: idUser,
@@ -37,9 +53,33 @@ export class ServicesService {
       question2: questao2
     }
 
-    const url = `${this.baseUrlCadastro}/step2`;
+    const url = `${this.baseUrlCadastro}/step3`;
 
     return this.http.post<any>(url, body)
+      .pipe(map(desafio1 => {
+        return desafio1;
+      }));
+  }
+
+  desafio3(idUser: number, questao1: string) {
+
+    let body = {
+      idUser: idUser,
+      question1: questao1,
+    }
+
+    const url = `${this.baseUrlCadastro}/step4`;
+
+    return this.http.post<any>(url, body)
+      .pipe(map(desafio1 => {
+        return desafio1;
+      }));
+  }
+
+  allUsers() {
+    const url = `${this.baseUrl}/getAllUsers`;
+
+    return this.http.get<any>(url)
       .pipe(map(desafio1 => {
         return desafio1;
       }));

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ServicesService } from 'src/app/services/services.service';
 
 @Component({
   selector: 'app-resultado',
@@ -7,9 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ResultadoComponent implements OnInit {
 
-  constructor() { }
+  usuarios: any
+  constructor(private allUsers: ServicesService) { }
 
   ngOnInit(): void {
+    this.getAll()
+  }
+
+  getAll(): void {
+    this.allUsers.allUsers().subscribe(users => {
+      this.usuarios = users;
+      console.log(users, 'retorno');
+    }, error => {
+      console.log(error);
+    })
   }
 
 }

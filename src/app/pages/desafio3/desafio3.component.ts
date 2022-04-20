@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router'
+import { ServicesService } from 'src/app/services/services.service';
 
 @Component({
   selector: 'app-desafio3',
@@ -8,6 +9,7 @@ import { Router } from '@angular/router'
 })
 export class Desafio3Component implements OnInit {
 
+  idUser: number;
   valor: any;
   id: any;
   valor2: any;
@@ -31,9 +33,11 @@ export class Desafio3Component implements OnInit {
   btn5Disable: boolean;
   btn6Disable: boolean;
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private desafioService: ServicesService) { }
 
   ngOnInit(): void {
+    let recebe = localStorage.getItem('idUser');
+    this.idUser = Number(recebe);
   }
 
   goToHome() {
@@ -45,7 +49,13 @@ export class Desafio3Component implements OnInit {
   }
 
   nextPage() {
-    this.router.navigate(['/desafio-3']);
+    this.desafioService.desafio2(this.idUser, this.valor, this.valor2).subscribe(res => {
+      this.router.navigate(['/desafio-3']);
+    }, error => {
+      alert('Algo deu errado tente novamente!');
+      console.log(error, 'error');
+    })
+
   }
 
   clickHandler(id, value) {

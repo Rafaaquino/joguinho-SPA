@@ -43,6 +43,7 @@ export class HomeComponent implements OnInit {
         localStorage.setItem('idUser', JSON.stringify(res.idUser));
         this.router.navigate(['/desafio-1']);
       }, error =>{
+        alert("CRM Inválida ou já em uso!");
         console.log(error, 'error');
       })
     }

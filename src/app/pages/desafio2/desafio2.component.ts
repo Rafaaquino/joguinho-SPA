@@ -38,7 +38,13 @@ export class Desafio2Component implements OnInit {
   }
 
   nextPage() {
-    this.router.navigate(['/desafio-2']);
+    this.desafioService.desafio1(this.idUser, this.valor,  ).subscribe(res => {
+      this.router.navigate(['/desafio-2']);
+    }, error => {
+      alert('Algo deu errado tente novamente!');
+      console.log(error, 'error');
+    })
+
   }
 
   clickHandler(id, value) {
@@ -60,11 +66,6 @@ export class Desafio2Component implements OnInit {
       this.cor3 = true
     }
     console.log(this.valor, this.id, "deu certo")
-    this.desafioService.desafio1(this.idUser, value, 'questao2').subscribe(res =>{
-
-    }, erro => {
-      console.log(erro, 'erro');
-    })
   }
 
 
