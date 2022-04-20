@@ -5,11 +5,18 @@
     </div>
     <div class="row d-flex">
       <div class="card">
-        <img class="img-fluid pbt-3" src="../../../assets/images/tela2/Qual a posologia de Alektos Ped_.png" alt="" >
+        <h4 class="text">Qual a posologia de Alektos comprimido (BILASTINA 20MG)?</h4>
         <div class="botoes">
-          <button class="btn btn-primary" [ngClass]="{'active': cor1}" id="btn1" value="4ML 1X AO DIA" #ref1 (click)="clickHandler(ref1.id, ref1.value)" [disabled]="btn1Disable">4ML 1X AO DIA</button>
-          <button class="btn btn-primary" [ngClass]="{'active': cor2}" id="btn2" value="5ML 2X AO DIA" #ref2 (click)="clickHandler(ref2.id, ref2.value)" [disabled]="btn2Disable">5ML 2X AO DIA</button>
-          <button class="btn btn-primary" [ngClass]="{'active': cor3}" id="btn3" value="5ML 3X 1 4X POR DIA DEPENDER DO PESO E IDADE" #ref3 (click)="clickHandler(ref3.id, ref3.value)" [disabled]="btn3Disable">5ML 3X 1 4X POR DIA DEPENDER DO PESO E IDADE</button>
+          <button class="btn btn-primary" [ngClass]="{'active': cor1}" id="btn1" value="1 comprimido ao dia (podendo aumentar a dose)" #ref1 (click)="clickHandler(ref1.id, ref1.value)" [disabled]="btn1Disable">1 comprimido ao dia (podendo aumentar a dose)</button>
+          <button class="btn btn-primary" [ngClass]="{'active': cor2}" id="btn2" value="1 comprimido por dia e não pode aumentar a dose" #ref2 (click)="clickHandler(ref2.id, ref2.value)" [disabled]="btn2Disable">1 comprimido por dia e não pode aumentar a dose</button>
+          <button class="btn btn-primary" [ngClass]="{'active': cor3}" id="btn3" value="Metade de um comprimido por dia" #ref3 (click)="clickHandler(ref3.id, ref3.value)" [disabled]="btn3Disable">Metade de um comprimido por dia </button>
+        </div>
+
+        <h4 class="text">Qual a posologia de Alektos Ped (BILASTINA 10MG)?</h4>
+        <div class="botoes">
+          <button class="btn btn-primary" [ngClass]="{'active': cor4}" id="btn4" value="5ML 2x por dia" #ref4 (click)="clickHandlerNew(ref4.id, ref4.value)" [disabled]="btn4Disable">5ML 2x por dia</button>
+          <button class="btn btn-primary" [ngClass]="{'active': cor5}" id="btn5" value="4ML 1 x ao dia (podendo aumentar a dose)" #ref5 (click)="clickHandlerNew(ref5.id, ref5.value)" [disabled]="btn5Disable">4ML 1 x ao dia (podendo aumentar a dose)</button>
+          <button class="btn btn-primary" [ngClass]="{'active': cor6}" id="btn6" value="Precisa calcular com base no peso da criança" #ref6 (click)="clickHandlerNew(ref6.id, ref6.value)" [disabled]="btn6Disable">Precisa calcular com base no peso da criança</button>
         </div>
       </div>
     </div>

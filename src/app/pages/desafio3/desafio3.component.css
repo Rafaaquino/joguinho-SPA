@@ -4,7 +4,7 @@
 
 .card {
   width: 100%;
-  height: 700px;
+  height: 973px;
   background-color: #75E3DA;
   border-radius: 2rem;
   padding: 3rem;
@@ -22,7 +22,7 @@
 .pl-img {
   position: absolute;
   left: 0;
-  bottom: -66px;
+  bottom: -365px;
 }
 
 .ml-4 {
@@ -36,4 +36,10 @@
 
 .active {
   background-color: #FAFF00;
+}
+
+@media screen and (min-width: 1024px) {
+  .pl-img {
+    bottom: -23px!important;
+  }
 }

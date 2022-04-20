@@ -1,4 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@font-face {
+  font-family: 'Nanum';
+  src: url('../src/assets/fonts/NanumPenScript-Regular.ttf');
+}
+
+h4 {
+  font-family: 'Nanum';
+  font-size: 2.8em;
+  font-weight: 300;
+  color: #fff;
+  padding: 25px 0px;
+}
+
+p{
+  font-family: 'Roboto';
+}
+
 * {
   margin: 0;
   box-sizing: border-box;
@@ -83,8 +101,28 @@ form {
   color: #fff;
 }
 
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
 .btn:disabled {
 
+}
+
+@media (min-width: 1200px){
+  .container {
+      max-width: 1140px!important;
+  }
+}
+
+@media (min-width: 992px) {
+  .container{
+      max-width: 960px;
+  }
 }
 
 @media screen and (min-width: 820px) {
