@@ -135,10 +135,10 @@ form {
 
 @media screen and (min-width: 820px) {
   .pl-img{
-    bottom: 67px!important;
+    bottom: -217px!important;
   }
   .main {
-    height: 100%;
+    height: auto;
   }
 }
 
@@ -147,6 +147,6 @@ form {
     bottom: 233px!important;
   }
   .main {
-    height: 100%;
+    height: auto;
   }
 }

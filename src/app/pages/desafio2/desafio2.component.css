@@ -37,3 +37,7 @@
 .active {
   background-color: #FAFF00;
 }
+
+.pl-img {
+  bottom: 31px!important;
+}
