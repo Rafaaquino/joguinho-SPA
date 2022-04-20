@@ -12,6 +12,8 @@ h1 {
 
 .bg-white {
   background: #fff;
+  padding: 2rem;
+  border-radius: 20px;
 }
 
 table {
@@ -35,4 +37,36 @@ table {
   padding: 0.75rem;
   vertical-align: top;
   border-top: 1px solid #dee2e6;
+}
+
+.xls{
+  width: 100%;
+  display: flex;
+  justify-content: right;
+  align-content: center;
+  align-items: center;
+  color: rgb(77, 77, 77);
+  font-family: Roboto;
+  cursor: pointer;
+}
+
+.tool{
+  width: 100%;
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.baixar {
+  display: flex;
+  flex-direction: column;
+}
+
+.paginacao {
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  font-family: Roboto;
 }

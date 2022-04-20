@@ -109,6 +109,14 @@ form {
   margin-left: auto;
 }
 
+.ngx-pagination .current {
+  padding: 0.1875rem 0.625rem;
+  background: #ffa900!important;
+  color: #fefefe;
+  cursor: default;
+  border-radius: 15px;
+}
+
 .btn:disabled {
 
 }

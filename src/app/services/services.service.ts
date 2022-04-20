@@ -56,8 +56,8 @@ export class ServicesService {
     const url = `${this.baseUrlCadastro}/step3`;
 
     return this.http.post<any>(url, body)
-      .pipe(map(desafio1 => {
-        return desafio1;
+      .pipe(map(desafio2 => {
+        return desafio2;
       }));
   }
 
@@ -71,8 +71,8 @@ export class ServicesService {
     const url = `${this.baseUrlCadastro}/step4`;
 
     return this.http.post<any>(url, body)
-      .pipe(map(desafio1 => {
-        return desafio1;
+      .pipe(map(desafio3 => {
+        return desafio3;
       }));
   }
 
@@ -80,8 +80,8 @@ export class ServicesService {
     const url = `${this.baseUrl}/getAllUsers`;
 
     return this.http.get<any>(url)
-      .pipe(map(desafio1 => {
-        return desafio1;
+      .pipe(map(usuarios => {
+        return usuarios;
       }));
   }
 }

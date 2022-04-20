@@ -8,7 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "deploy:gh" : "ng build --prod --output-path docs --base-href /joguinho-SPA/"
+    "deploy:gh": "ng build --prod --output-path docs --base-href /"
   },
   "private": true,
   "dependencies": {
@@ -20,8 +20,11 @@
     "@angular/platform-browser": "~11.2.14",
     "@angular/platform-browser-dynamic": "~11.2.14",
     "@angular/router": "~11.2.14",
+    "file-saver": "^2.0.5",
+    "ngx-pagination": "^5.1.1",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
+    "xlsx": "^0.18.5",
     "zone.js": "~0.11.3"
   },
   "devDependencies": {

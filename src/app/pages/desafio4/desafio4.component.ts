@@ -39,6 +39,7 @@ export class Desafio4Component implements OnInit {
 
   nextPage() {
     this.desafioService.desafio3(this.idUser, this.valor).subscribe(res => {
+      console.log(res, 'retorno');
       this.router.navigate(['/obrigado']);
     }, error => {
       alert('Algo deu errado tente novamente!');
