@@ -1,11 +1,11 @@
 .main {
-  background-image: url('../../../assets/images/tela1/bg.png');
+  background-image: url('https://rafaaquino.github.io/joguinho-SPA/assets/images/tela1/bg.png');
 }
 
 .canvas {
   width: 100%;
   height: 700px;
-  background-image: url('../../../assets/images/tela1/pontos.png');
+  background-image: url('https://rafaaquino.github.io/joguinho-SPA/assets/images/tela1/pontos.png');
   background-position: center center;
   background-repeat: no-repeat;
   background-color: #fff;
