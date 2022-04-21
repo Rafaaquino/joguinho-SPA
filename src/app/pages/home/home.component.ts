@@ -33,7 +33,6 @@ export class HomeComponent implements OnInit {
 
   submitFormLogin() {
     if(this.registrationForm.invalid){
-      alert("formulario invalido");
       return;
     }
     else {
