@@ -41,3 +41,11 @@
 .pl-img {
   bottom: 31px!important;
 }
+
+
+@media screen and (max-width: 420px) {
+
+  .card {
+    height: 614px !important;
+  }
+}

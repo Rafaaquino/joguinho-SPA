@@ -150,3 +150,21 @@ form {
     height: auto;
   }
 }
+
+
+
+@media screen and (max-width: 420px) {
+  h4 {
+    font-size: 1.8em;
+  }
+
+  .pl-img {
+    position: relative!important;
+    bottom: 0!important;
+  }
+
+  .card {
+    height: 1046px !important;
+  }
+}
+

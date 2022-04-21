@@ -37,3 +37,11 @@
 .active {
   background-color: #FAFF00;
 }
+
+
+@media screen and (max-width: 420px) {
+
+  .card {
+    height: 540px !important;
+  }
+}
