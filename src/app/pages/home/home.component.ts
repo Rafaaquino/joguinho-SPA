@@ -33,10 +33,10 @@ export class HomeComponent implements OnInit {
 
   submitFormLogin() {
     if(this.registrationForm.invalid){
+      alert("Erro, Tente novamente");
       return;
     }
     else {
-      alert("formulario enviado");
       this.registerService.registerUser(this.registrationForm.value.nome, this.registrationForm.value.uf, this.registrationForm.value.crm).subscribe(res =>{
         console.log(res, "retorno cadastro usuario");
         localStorage.setItem('idUser', JSON.stringify(res.idUser));
