@@ -30,7 +30,6 @@
               "src/styles.css"
             ],
             "scripts": [
-              "node_modules/jquey/dist/jquery.min.js"
             ]
           },
           "configurations": {

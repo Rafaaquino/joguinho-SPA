@@ -19,6 +19,9 @@ export class PrimeiraComponent implements OnInit {
   constructor(private router: Router, private services: ServicesService ) { }
 
   ngOnInit(): void {
+    this.imagem1 = this.imagem1.replace("data:image/png;base64,", "");
+    this.imagem2 = this.imagem2.replace("data:image/png;base64,", "");
+    this.imagem3 = this.imagem3.replace("data:image/png;base64,", "");
   }
 
   goToHome() {
@@ -26,6 +29,8 @@ export class PrimeiraComponent implements OnInit {
   }
 
   nextPage() {
+
+
 
     this.services.desafioImagem(this.name, this.uf, Number(this.crm), this.imagem1, this.imagem2, this.imagem3).subscribe(res => {
       console.log(res);

@@ -4,13 +4,20 @@ var coors = {
             y: 0
         };
 
+var canvas = document.getElementById('canvas');
 
-var canvas = document.querySelector('#canvas');
-console.log(canvas, 'teste');
-    canvas.width = canvas.clientWidth;
-    canvas.height = canvas.clientHeight;
+var canvasTamanho = document.querySelector('.canvas');
+
+
+let largura = $('.main').width(); 
+let altura = $('.main').height();
+
+
+
+    canvas.width = 700;
+    canvas.height = 300;
     var context = canvas.getContext('2d');
-
+    
     var start = function(coors) {
         context.beginPath();
         context.moveTo(coors.x, coors.y);
@@ -50,10 +57,12 @@ console.log(canvas, 'teste');
             x: e.clientX || e.targetTouches[0].pageX.toString(),
             y: e.clientY || e.targetTouches[0].pageY.toString()
         };
-
-        var lastX = coors.x;
-        var lastY = coors.y;
-       }else if(e.type == "touchend"){
+        
+        const rect = canvas.getBoundingClientRect();
+        var lastX = coors.x ;
+        var lastY = coors.y ;
+       }
+       else if(e.type == "touchend"){
          coors = {
             x: lastX,
             y: lastY
@@ -81,29 +90,23 @@ console.log(canvas, 'teste');
     // prevent elastic scrolling
     document.body.addEventListener('touchmove', function(e) {
         e.preventDefault();
-    }, false);
+    },  { passive: false });
     // end body:touchmove
-
+    
     window.onresize = function(e) {
-      console.log(canvas.width, canvas.height, 'tamano');
-        canvas.width = document.canvas.width;
-        canvas.height = document.canvas.height;
+        canvas.width = document.body.clientWidth;
+        canvas.height = document.body.clientHeight;
     };
 
+  
 
-    function base64Img(etv) {
-      btnDisplay.addEventListener("click", function() {
+    $('.btnDisplay').click(function(){
+        const dataURI = canvas.toDataURL("image/png");
+        console.log(dataURI);
+        localStorage.setItem('imgCanva', dataURI);
+        
+    });
 
-        const dataURI = canvas.toDataURL();
-        console.log('assinaturaBase64', dataURI);
-
-      })
-
-    }
-
-
-
-    base64Img();
-    $('.aviso2').click(function(){
+    $('.btnLimpar').click(function(){
         context.clearRect(0, 0, canvas.width, canvas.height);
     });
