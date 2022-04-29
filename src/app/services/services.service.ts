@@ -95,6 +95,15 @@ export class ServicesService {
       }));
   }
 
+  allImages() {
+    const url = `${this.baseUrl}/getAllImages`;
+
+    return this.http.get<any>(url)
+      .pipe(map(usuariosImage => {
+        return usuariosImage;
+      }));
+  }
+
   allUsers() {
     const url = `${this.baseUrl}/getAllUsers`;
 

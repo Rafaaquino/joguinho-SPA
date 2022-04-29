@@ -12,6 +12,7 @@ export class ResultadoImgComponent implements OnInit {
   usuarios: any
   fileName= 'DesafioBilastina.xlsx';
   paginaAtual = 1;
+  base64 = "data:image/png;base64,";
   @Output() pageChange: EventEmitter<number>;
 
 
@@ -22,7 +23,7 @@ export class ResultadoImgComponent implements OnInit {
   }
 
   getAll(): void {
-    this.allUsers.allUsers().subscribe(users => {
+    this.allUsers.allImages().subscribe(users => {
       this.usuarios = users;
       console.log(users, 'retorno');
     }, error => {
