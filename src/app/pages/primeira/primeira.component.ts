@@ -13,8 +13,8 @@ export class PrimeiraComponent implements OnInit {
   uf: string = localStorage.getItem('uf');
   crm: string = localStorage.getItem('crm');
   imagem1: string = localStorage.getItem('imgCanva');
-  imagem2: string = localStorage.getItem('imgCanva');
-  imagem3: string = localStorage.getItem('imgCanva');
+  imagem2: string = localStorage.getItem('imgCanva2');
+  imagem3: string = localStorage.getItem('imgCanva3');
 
   constructor(private router: Router, private services: ServicesService ) { }
 
