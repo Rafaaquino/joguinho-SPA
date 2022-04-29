@@ -37,14 +37,19 @@ export class HomeComponent implements OnInit {
       return;
     }
     else {
-      this.registerService.registerUser(this.registrationForm.value.nome, this.registrationForm.value.uf, this.registrationForm.value.crm).subscribe(res =>{
-        console.log(res, "retorno cadastro usuario");
-        localStorage.setItem('idUser', JSON.stringify(res.idUser));
-        this.router.navigate(['/desafio-1']);
-      }, error =>{
-        alert("CRM Inválida ou já em uso!");
-        console.log(error, 'error');
-      })
+
+      localStorage.setItem('name', this.registrationForm.value.nome);
+      localStorage.setItem('uf', this.registrationForm.value.uf);
+      localStorage.setItem('crm', this.registrationForm.value.crm);
+      this.router.navigate(['/desafio-assinatura']);
+      // this.registerService.registerUser(this.registrationForm.value.nome, this.registrationForm.value.uf, this.registrationForm.value.crm).subscribe(res =>{
+      //   console.log(res, "retorno cadastro usuario");
+      //   localStorage.setItem('idUser', JSON.stringify(res.idUser));
+      //   this.router.navigate(['/desafio-1']);
+      // }, error =>{
+      //   alert("CRM Inválida ou já em uso!");
+      //   console.log(error, 'error');
+      // })
     }
 
   }

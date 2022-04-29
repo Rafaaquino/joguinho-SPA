@@ -68,11 +68,30 @@ export class ServicesService {
       "question1": questao1
     }
 
-    const url = `${this.baseUrlCadastro}/step4`;
+    const url = `${this.baseUrlCadastro}/step`;
 
     return this.http.post<any>(url, body)
       .pipe(map(desafio3 => {
         return desafio3;
+      }));
+  }
+
+  desafioImagem(name: string, uf: string, crm: number, image1: string, image2: string, image3: string) {
+
+    let body = {
+      "name": name,
+      "uf": uf,
+      "crm": crm,
+      "image1": image1,
+      "image2": image2,
+      "image3": image3
+    }
+
+    const url = `${this.baseUrlCadastro}/step5`;
+
+    return this.http.post<any>(url, body)
+      .pipe(map(desafioImage => {
+        return desafioImage;
       }));
   }
 

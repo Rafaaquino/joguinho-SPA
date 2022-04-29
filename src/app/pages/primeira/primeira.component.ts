@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ServicesService } from 'src/app/services/services.service';
 
 @Component({
   selector: 'app-primeira',
@@ -8,7 +9,14 @@ import { Router } from '@angular/router';
 })
 export class PrimeiraComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  name: string = localStorage.getItem('name');
+  uf: string = localStorage.getItem('uf');
+  crm: string = localStorage.getItem('crm');
+  imagem1: string = localStorage.getItem('imgCanva');
+  imagem2: string = localStorage.getItem('imgCanva');
+  imagem3: string = localStorage.getItem('imgCanva');
+
+  constructor(private router: Router, private services: ServicesService ) { }
 
   ngOnInit(): void {
   }
@@ -18,8 +26,14 @@ export class PrimeiraComponent implements OnInit {
   }
 
   nextPage() {
-    this.router.navigate(['/desafio-2']);
+
+    this.services.desafioImagem(this.name, this.uf, Number(this.crm), this.imagem1, this.imagem2, this.imagem3).subscribe(res => {
+      console.log(res);
+      this.router.navigate(['/obrigado']);
+    }, error => {
+      console.log(error);
+      alert('Algo de errado, precisa clicar em gravar imagem');
+    });
+
   }
-
-
 }

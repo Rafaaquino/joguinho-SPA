@@ -29,7 +29,9 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/jquey/dist/jquery.min.js"
+            ]
           },
           "configurations": {
             "production": {

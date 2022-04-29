@@ -11,6 +11,7 @@ import { Desafio3Component } from './desafio3/desafio3.component';
 import { ObrigadoComponent } from './obrigado/obrigado.component';
 import { Desafio4Component } from './desafio4/desafio4.component';
 import { ResultadoComponent } from './resultado/resultado.component';
+import { ResultadoImgComponent } from './resultado-img/resultado-img.component';
 
 
 
@@ -22,7 +23,8 @@ import { ResultadoComponent } from './resultado/resultado.component';
     Desafio3Component,
     ObrigadoComponent,
     Desafio4Component,
-    ResultadoComponent
+    ResultadoComponent,
+    ResultadoImgComponent
   ],
   imports: [
     CommonModule,
@@ -38,7 +40,8 @@ import { ResultadoComponent } from './resultado/resultado.component';
     Desafio3Component,
     ObrigadoComponent,
     Desafio4Component,
-    ResultadoComponent
+    ResultadoComponent,
+    ResultadoImgComponent
   ]
 })
 export class PagesModule { }

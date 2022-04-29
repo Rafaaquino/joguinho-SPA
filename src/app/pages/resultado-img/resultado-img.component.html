@@ -1,0 +1,44 @@
+<div class="main">
+  <div class="container">
+    <div class="row d-flex">
+      <h1 class="text">Resultado</h1>
+    </div>
+    <div class="row d-flex bg-white">
+      <table class="table" id="excel-table">
+        <thead>
+          <tr>
+            <th scope="col">Nome</th>
+            <th scope="col">Uf</th>
+            <th scope="col">Crm</th>
+            <th scope="col">Pergunta 1</th>
+            <th scope="col">Pergunta 2</th>
+            <th scope="col">Pergunta 3</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let use of usuarios  | paginate: { itemsPerPage: 15, currentPage: paginaAtual }; let i = index">
+            <th scope="row">{{use.name}}</th>
+            <td>{{use.uf}}</td>
+            <td>{{use.crm}}</td>
+            <td>{{use.question1}}</td>
+            <td>{{use.question2}}</td>
+            <td>{{use.question3}}</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="tool">
+        <div class="paginacao">
+          <pagination-controls (pageChange)="paginaAtual = $event" previousLabel="Anterior" nextLabel="Próximo"></pagination-controls>
+        </div>
+        <div class="xls">
+          <a class="baixar" (click)="exportexcel()">
+            <img class="img-fluid" src="../../../assets/images/xls.png" width="40"> Baixar
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="row d-flex">
+      <img  class="img-fluid" src="https://rafaaquino.github.io/joguinho-SPA/assets/images/ursinho.png" alt="play">
+    </div>
+  </div>
+</div>

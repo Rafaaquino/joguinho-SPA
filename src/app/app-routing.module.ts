@@ -10,6 +10,7 @@ import { Desafio3Component } from './pages/desafio3/desafio3.component';
 import { Desafio4Component } from './pages/desafio4/desafio4.component';
 import { ObrigadoComponent } from './pages/obrigado/obrigado.component';
 import { ResultadoComponent } from './pages/resultado/resultado.component';
+import { ResultadoImgComponent } from './pages/resultado-img/resultado-img.component';
 
 
 const routes: Routes = [
@@ -20,7 +21,8 @@ const routes: Routes = [
   { path: 'desafio-2', component: Desafio3Component },
   { path: 'desafio-3', component: Desafio4Component },
   { path: 'obrigado', component: ObrigadoComponent },
-  { path: 'resultado', component: ResultadoComponent}
+  { path: 'resultado', component: ResultadoComponent},
+  { path: 'resultado-desafio2', component: ResultadoImgComponent}
 
 ];
 
