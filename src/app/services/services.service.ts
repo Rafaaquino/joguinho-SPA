@@ -95,6 +95,24 @@ export class ServicesService {
       }));
   }
 
+  festaUsuario(uf: string, crm: number){
+    let body = {
+      "name": "Usuario da festa",
+      "uf": uf,
+      "crm": crm,
+      "image1": "",
+      "image2": "",
+      "image3": ""
+    }
+
+    const url = `${this.baseUrlCadastro}/step5`;
+
+    return this.http.post<Cadastro>(url, body)
+      .pipe(map(cadastroFesta => {
+        return cadastroFesta;
+      }));
+  }
+
   allImages() {
     const url = `${this.baseUrl}/getAllImages`;
 

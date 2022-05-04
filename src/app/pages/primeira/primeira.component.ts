@@ -12,9 +12,9 @@ export class PrimeiraComponent implements OnInit {
   name: string = localStorage.getItem('name');
   uf: string = localStorage.getItem('uf');
   crm: string = localStorage.getItem('crm');
-  imagem1: string = localStorage.getItem('imgCanva');
-  imagem2: string = localStorage.getItem('imgCanva2');
-  imagem3: string = localStorage.getItem('imgCanva3');
+  imagem1: string;
+  imagem2: string;
+  imagem3: string;
 
   constructor(private router: Router, private services: ServicesService ) { }
 
@@ -29,7 +29,13 @@ export class PrimeiraComponent implements OnInit {
   }
 
   nextPage() {
+    this.imagem1 = localStorage.getItem('imgCanva');
+    this.imagem2 = localStorage.getItem('imgCanva2');
+    this.imagem3 = localStorage.getItem('imgCanva3');
 
+    this.imagem1 = this.imagem1.replace("data:image/png;base64,", "");
+    this.imagem2 = this.imagem2.replace("data:image/png;base64,", "");
+    this.imagem3 = this.imagem3.replace("data:image/png;base64,", "");
 
 
     this.services.desafioImagem(this.name, this.uf, Number(this.crm), this.imagem1, this.imagem2, this.imagem3).subscribe(res => {

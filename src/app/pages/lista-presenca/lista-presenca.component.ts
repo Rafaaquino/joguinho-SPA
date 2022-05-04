@@ -3,16 +3,16 @@ import { ServicesService } from 'src/app/services/services.service';
 import * as XLSX from 'xlsx';
 
 @Component({
-  selector: 'app-resultado-img',
-  templateUrl: './resultado-img.component.html',
-  styleUrls: ['./resultado-img.component.css']
+  selector: 'app-lista-presenca',
+  templateUrl: './lista-presenca.component.html',
+  styleUrls: ['./lista-presenca.component.css']
 })
-export class ResultadoImgComponent implements OnInit {
+export class ListaPresencaComponent implements OnInit {
 
   usuarios: any
   fileName= 'DesafioBilastina.xlsx';
   paginaAtual = 1;
-  base64 = "data:image/png;base64,";
+  listaPresenca: any = [];
   @Output() pageChange: EventEmitter<number>;
 
 
@@ -28,11 +28,12 @@ export class ResultadoImgComponent implements OnInit {
       this.usuarios = users;
 
       this.usuarios  = this.usuarios.filter(function(presenca) {
-        return presenca.name != "Usuario da festa";
+        return presenca.name == "Usuario da festa";
       });
+
     }, error => {
       console.log(error);
-    })
+    });
   }
 
   exportexcel(): void
@@ -49,4 +50,5 @@ export class ResultadoImgComponent implements OnInit {
        XLSX.writeFile(wb, this.fileName);
 
     }
+
 }

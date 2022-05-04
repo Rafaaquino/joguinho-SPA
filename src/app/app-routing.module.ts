@@ -11,6 +11,9 @@ import { Desafio4Component } from './pages/desafio4/desafio4.component';
 import { ObrigadoComponent } from './pages/obrigado/obrigado.component';
 import { ResultadoComponent } from './pages/resultado/resultado.component';
 import { ResultadoImgComponent } from './pages/resultado-img/resultado-img.component';
+import { FestaComponent } from './pages/festa/festa.component';
+import { ObrigadoFestaComponent } from './pages/obrigado-festa/obrigado-festa.component';
+import { ListaPresencaComponent } from './pages/lista-presenca/lista-presenca.component';
 
 
 const routes: Routes = [
@@ -22,7 +25,10 @@ const routes: Routes = [
   { path: 'desafio-3', component: Desafio4Component },
   { path: 'obrigado', component: ObrigadoComponent },
   { path: 'resultado', component: ResultadoComponent},
-  { path: 'resultado-desafio2', component: ResultadoImgComponent}
+  { path: 'resultado-desafio2', component: ResultadoImgComponent},
+  { path: 'festa', component: FestaComponent},
+  { path: 'inscricao-festa', component: ObrigadoFestaComponent},
+  { path: 'lista-presenca-festa', component: ListaPresencaComponent}
 
 ];
 

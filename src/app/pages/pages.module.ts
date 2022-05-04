@@ -12,6 +12,9 @@ import { ObrigadoComponent } from './obrigado/obrigado.component';
 import { Desafio4Component } from './desafio4/desafio4.component';
 import { ResultadoComponent } from './resultado/resultado.component';
 import { ResultadoImgComponent } from './resultado-img/resultado-img.component';
+import { FestaComponent } from './festa/festa.component';
+import { ObrigadoFestaComponent } from './obrigado-festa/obrigado-festa.component';
+import { ListaPresencaComponent } from './lista-presenca/lista-presenca.component';
 
 
 
@@ -24,7 +27,10 @@ import { ResultadoImgComponent } from './resultado-img/resultado-img.component';
     ObrigadoComponent,
     Desafio4Component,
     ResultadoComponent,
-    ResultadoImgComponent
+    ResultadoImgComponent,
+    FestaComponent,
+    ObrigadoFestaComponent,
+    ListaPresencaComponent
   ],
   imports: [
     CommonModule,
@@ -41,7 +47,10 @@ import { ResultadoImgComponent } from './resultado-img/resultado-img.component';
     ObrigadoComponent,
     Desafio4Component,
     ResultadoComponent,
-    ResultadoImgComponent
+    ResultadoImgComponent,
+    FestaComponent,
+    ObrigadoFestaComponent,
+    ListaPresencaComponent
   ]
 })
 export class PagesModule { }
